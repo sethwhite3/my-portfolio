@@ -113,5 +113,29 @@
     </script>
         <script src="/my-portfolio/static/js/2.a0d231e6.chunk.js"></script>
         <script src="/my-portfolio/static/js/main.788b0246.chunk.js"></script>
+        
+        <script>
+            var navItems = document.querySelectorAll(".social > li");
+            for(i = 0; i < navItems.length; i++) {
+              navItems[i].setAttribute("data-tracked", "false");
+              navItems[i].addEventListener("mouseclick", function() {
+                if(this.getAttribute("data-tracked") == "false") {
+                  ga("send", "event", "Navigation", "Main Item Clicked", this.childNodes[0].innerText);
+                  this.setAttribute("data-tracked", "true");
+                }
+              }, false);
+            }
+            
+            var footerIcons = document.querySelectorAll("#navbarNav > li");
+            for(i = 0; i < footerIcons.length; i++) {
+              footerIcons[i].setAttribute("data-tracked", "false");
+              footerIcons[i].addEventListener("mouseclick", function() {
+                if(this.getAttribute("data-tracked") == "false") {
+                  ga("send", "event", "Navigation", "Main Item Clicked", this.childNodes[0].title);
+                  this.setAttribute("data-tracked", "true");
+                }
+              }, false);
+            }
+        </script>
     </body>
 </html>
