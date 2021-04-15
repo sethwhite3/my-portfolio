@@ -119,8 +119,8 @@
             for(i = 0; i < navItems.length; i++) {
               navItems[i].setAttribute("data-tracked", "false");
               navItems[i].addEventListener("mouseclick", function() {
-                if(this.getAttribute("data-tracked") == "false") {
-                  ga("send", "event", "Navigation", "Main Item Clicked", this.childNodes[0].innerText);
+                if(this.getAttribute("data-tracked") === "false") {
+                  gtag("event", "Nav_Item_Clicked", {"Nav_Clicked" : this.childNodes[0].innerText});
                   this.setAttribute("data-tracked", "true");
                 }
               }, false);
@@ -130,8 +130,8 @@
             for(i = 0; i < footerIcons.length; i++) {
               footerIcons[i].setAttribute("data-tracked", "false");
               footerIcons[i].addEventListener("mouseclick", function() {
-                if(this.getAttribute("data-tracked") == "false") {
-                  ga("send", "event", "Navigation", "Main Item Clicked", this.childNodes[0].title);
+                if(this.getAttribute("data-tracked") === "false") {
+                  gtag("event", "Social_Icon_Clicked", {"Social_Clicked" : this.childNodes[0].title });
                   this.setAttribute("data-tracked", "true");
                 }
               }, false);
