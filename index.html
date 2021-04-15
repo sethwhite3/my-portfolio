@@ -115,7 +115,7 @@
         <script src="/my-portfolio/static/js/main.788b0246.chunk.js"></script>
         
         <script>
-            var navItems = document.querySelectorAll(".social > li");
+            var navItems = document.querySelectorAll(".navbar-nav > li");
             for(i = 0; i < navItems.length; i++) {
               navItems[i].setAttribute("data-tracked", "false");
               navItems[i].addEventListener("mouseclick", function() {
@@ -126,7 +126,7 @@
               }, false);
             }
             
-            var footerIcons = document.querySelectorAll("#navbarNav > li");
+            var footerIcons = document.querySelectorAll(".social > li");
             for(i = 0; i < footerIcons.length; i++) {
               footerIcons[i].setAttribute("data-tracked", "false");
               footerIcons[i].addEventListener("mouseclick", function() {
