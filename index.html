@@ -120,7 +120,7 @@
               navItems[i].setAttribute("data-tracked", "false");
               navItems[i].addEventListener("click", function() {
                 if(this.getAttribute("data-tracked") === "false") {
-                  gtag("event", `${this.childNodes[0].innerText} + " clicked"`, {"Nav_Clicked" : this.childNodes[0].innerText});
+                  gtag("event", `${this.childNodes[0].innerText} clicked`, {"Nav_Clicked" : this.childNodes[0].innerText});
                   this.setAttribute("data-tracked", "true");
                 }
               }, false);
@@ -131,7 +131,7 @@
               footerIcons[i].setAttribute("data-tracked", "false");
               footerIcons[i].addEventListener("click", function() {
                 if(this.getAttribute("data-tracked") === "false") {
-                  gtag("event", `${this.childNodes[0].title} + " clicked"`, {"Social_Clicked" : this.childNodes[0].title });
+                  gtag("event", `${this.childNodes[0].title} clicked`, {"Social_Clicked" : this.childNodes[0].title });
                   this.setAttribute("data-tracked", "true");
                 }
               }, false);
